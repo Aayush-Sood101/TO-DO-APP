@@ -1,8 +1,26 @@
-# React + Vite
+# React Todo App with Material UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Todo application built with React and Material UI that allows users to manage and view todo items with a clean, responsive interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display todos in a responsive grid layout
+- View detailed information for each todo in a modal dialog
+- Clean and modern UI using Material UI components
+- Error handling and loading states
+- Responsive design with CSS Grid
+- Fetch todos from external API (dummyjson.com)
+
+## Technologies Used
+
+- React 19
+- Material UI 6.4
+- CSS Modules
+- Vite (for build tooling)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm or yarn
