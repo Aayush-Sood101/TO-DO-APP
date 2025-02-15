@@ -7,6 +7,10 @@ function App() {
   const [toDoList , setToDoList] = useState([]);
   const [loading , setLoading] = useState(false);
   const [errorMsg , setErrorMsg] = useState('');
+  const [toDoDetails , setToDoDetails] = useState(null);
+  const [openDialoag , setOpenDialog] = useState(false);
+
+
   async function fetchToDoList(){
     try{
       setLoading(true);
@@ -30,6 +34,26 @@ function App() {
     }
   }
 
+
+  async function fetchDetailsOfCurrentToDo(getCurrentToDoId) {
+    try{
+        const apiResponse = await fetch(`https://dummyjson.com/todos/${getCurrentToDoId}`)
+        const details = await apiResponse.json();
+        if(details){
+          setToDoDetails(details);
+          setOpenDialog(true);
+          
+        }
+        else{
+          setToDoDetails(details);
+          setOpenDialog(false);
+        }
+    } catch(error){
+      setToDoDetails(null);
+      setOpenDialog(false);
+    }
+  }
+
   useEffect(() => {
     fetchToDoList();
   } , [])
@@ -40,7 +64,7 @@ function App() {
       <div className={classes.toDoListWrapper}>
         {
           toDoList.map((toDoItem) => {
-            return <ToDoItem todo = {toDoItem}/>
+            return <ToDoItem todo = {toDoItem} fetchDetailsOfCurrentToDo={fetchDetailsOfCurrentToDo}/>
           })
         }
       </div>

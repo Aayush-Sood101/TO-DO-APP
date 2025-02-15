@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography , CardActions , Button} from '@mui/material';
 
-const ToDoItem = ({todo}) => {
+const ToDoItem = ({todo , fetchDetailsOfCurrentToDo}) => {
     // console.log(todo);
     
     return (
@@ -14,7 +14,9 @@ const ToDoItem = ({todo}) => {
                 <Typography varian = "h5" color='text.secondary'>{todo.todo}</Typography>
             </CardContent>
             <CardActions>
-                <Button sx = {{
+                <Button
+                onClick={() => fetchDetailsOfCurrentToDo(todo.id)} 
+                sx = {{
                     backgroundColor : 'black' ,
                     color: 'white' , 
                     opacity: 0.75 , 
