@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import classes from './styles.module.css'
 
 function App() {
 
@@ -33,8 +34,8 @@ function App() {
   } , [])
 
   return (
-    <div>
-      <h1>To-DO APP USING MATERIAL UI</h1>
+    <div className={classes.mainWrapper}>
+      <h1 className={classes.headerTitle}>To-DO APP USING MATERIAL UI</h1>
     </div>
   )
 }
