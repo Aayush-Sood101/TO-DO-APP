@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import classes from './styles.module.css'
 import ToDoItem from "./components/todo-item";
+import ToDoDetails from "./components/todo-details";
 
 function App() {
 
@@ -68,6 +69,7 @@ function App() {
           })
         }
       </div>
+      <ToDoDetails openDialog={openDialoag} toDoDetails={toDoDetails} setOpenDialog = {setOpenDialog}/>
     </div>
   )
 }
