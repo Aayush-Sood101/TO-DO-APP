@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import classes from './styles.module.css'
+import ToDoItem from "./components/todo-item";
 
 function App() {
 
@@ -36,6 +37,13 @@ function App() {
   return (
     <div className={classes.mainWrapper}>
       <h1 className={classes.headerTitle}>To-DO APP USING MATERIAL UI</h1>
+      <div className={classes.toDoListWrapper}>
+        {
+          toDoList.map((toDoItem) => {
+            return <ToDoItem todo = {toDoItem}/>
+          })
+        }
+      </div>
     </div>
   )
 }
