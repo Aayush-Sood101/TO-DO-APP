@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className={classes.mainWrapper}>
-      <h1 className={classes.headerTitle}>Simmple To-Do APP USING MATERIAL UI</h1>
+      <h1 className={classes.headerTitle}>Simple To-Do APP USING MATERIAL UI</h1>
       <div className={classes.toDoListWrapper}>
         {
           toDoList.map((toDoItem) => {
